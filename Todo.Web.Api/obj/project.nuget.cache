@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Oo8KUJlAXyCzMR/XZqZq/Hqp1S6diVLTJ951Rj0cTIEqolKtqhlNDLK7W6gShzMpVcvvrqHrM0uskcIKQlc6qA==",
+  "success": true,
+  "projectFilePath": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api\\Todo.Web.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hinds\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Web.Api", "Todo.Web.Api.csproj", "{DAF119C2-49FA-4314-9495-7DB3D0F335D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Web.Api", "Todo.Web.Api.csproj", "{DAF119C2-49FA-4314-9495-7DB3D0F335D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Web.Api.Data", "..\Todo.Web.Api.Data\Todo.Web.Api.Data.csproj", "{D5E35A3F-C090-4239-A5A8-18A32BBE9E24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Web.Api.Models", "..\Todo.Web.Api.Models\Todo.Web.Api.Models.csproj", "{39DD561E-FB49-4F0D-A635-122D26F7A68C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DAF119C2-49FA-4314-9495-7DB3D0F335D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAF119C2-49FA-4314-9495-7DB3D0F335D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAF119C2-49FA-4314-9495-7DB3D0F335D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E35A3F-C090-4239-A5A8-18A32BBE9E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E35A3F-C090-4239-A5A8-18A32BBE9E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E35A3F-C090-4239-A5A8-18A32BBE9E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E35A3F-C090-4239-A5A8-18A32BBE9E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39DD561E-FB49-4F0D-A635-122D26F7A68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39DD561E-FB49-4F0D-A635-122D26F7A68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39DD561E-FB49-4F0D-A635-122D26F7A68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39DD561E-FB49-4F0D-A635-122D26F7A68C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

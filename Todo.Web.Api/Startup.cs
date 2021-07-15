@@ -1,15 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
+using Todo.Web.Api.Data.Connections;
+using Todo.Web.Api.Data.Interfaces;
+using Todo.Web.Api.Data.Repositories;
+using Todo.Web.Api.Models.Models;
 
 namespace Todo.Web.Api
 {
@@ -26,6 +25,23 @@ namespace Todo.Web.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Todo.Web.Api", Version = "v1" });
+            });
+
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                var enumConverter = new JsonStringEnumConverter();
+                options.JsonSerializerOptions.Converters.Add(enumConverter);
+            });
+
+            services.Configure<ConnectionStrings>(Configuration.GetSection(nameof(ConnectionStrings)));
+            services.AddOptions();
+
+            services.AddSingleton<IDbConnectionClient, SqlConnectionClient>();
+            services.AddSingleton<ISharingRepository, SharingSqlServerRepository>();
+            services.AddSingleton<ITodoRepository, TodoSqlServerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +50,8 @@ namespace Todo.Web.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo.Web.Api v1"));
             }
 
             app.UseHttpsRedirection();

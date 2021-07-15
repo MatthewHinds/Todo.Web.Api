@@ -4,6 +4,132 @@
     "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api\\Todo.Web.Api.csproj": {}
   },
   "projects": {
+    "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Data\\Todo.Web.Api.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Data\\Todo.Web.Api.Data.csproj",
+        "projectName": "Todo.Web.Api.Data",
+        "projectPath": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Data\\Todo.Web.Api.Data.csproj",
+        "packagesPath": "C:\\Users\\hinds\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\hinds\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Models\\Todo.Web.Api.Models.csproj": {
+                "projectPath": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Models\\Todo.Web.Api.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.90, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Models\\Todo.Web.Api.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Models\\Todo.Web.Api.Models.csproj",
+        "projectName": "Todo.Web.Api.Models",
+        "projectPath": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Models\\Todo.Web.Api.Models.csproj",
+        "packagesPath": "C:\\Users\\hinds\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\hinds\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api\\Todo.Web.Api.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -18,16 +144,23 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Data\\Todo.Web.Api.Data.csproj": {
+                "projectPath": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Data\\Todo.Web.Api.Data.csproj"
+              },
+              "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Models\\Todo.Web.Api.Models.csproj": {
+                "projectPath": "D:\\Development\\Projects\\Todo.Web.Api\\Todo.Web.Api.Models\\Todo.Web.Api.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -37,12 +170,16 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.13, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.4, )"
             }
           },
           "imports": [

@@ -30,11 +30,7 @@ namespace Todo.Web.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Todo.Web.Api", Version = "v1" });
             });
 
-            services.AddControllers().AddJsonOptions(options =>
-            {
-                var enumConverter = new JsonStringEnumConverter();
-                options.JsonSerializerOptions.Converters.Add(enumConverter);
-            });
+            services.AddCors();
 
             services.Configure<ConnectionStrings>(Configuration.GetSection(nameof(ConnectionStrings)));
             services.AddOptions();
@@ -53,6 +49,10 @@ namespace Todo.Web.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo.Web.Api v1"));
             }
+
+            app.UseCors(
+                options => options.WithOrigins(Configuration.GetSection("ClientUrl").Value).AllowAnyMethod().AllowAnyHeader()
+            );
 
             app.UseHttpsRedirection();
 

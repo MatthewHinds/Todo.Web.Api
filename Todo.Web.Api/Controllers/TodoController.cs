@@ -27,7 +27,7 @@ namespace Todo.Web.Api.Controllers
 
         [HttpGet]
         [Route("get/{code}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<TodoItem>))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response<List<TodoItem>>))]
         public async Task<IActionResult> GetTodos(string code)
         {
             var response = await _todoContext.GetTodos(code);
@@ -55,7 +55,7 @@ namespace Todo.Web.Api.Controllers
         [HttpPut]
         [Route("update/{code}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ResponseMessage))]
-        public async Task<IActionResult> UpdateTodo(string code, [FromBody] TodoItem todoItem)
+        public async Task<IActionResult> UpdateTodo(string code, long todoId, [FromBody] TodoItem todoItem)
         {
             var response = await _todoContext.UpdateTodo(code, todoItem);
             return Ok(response);
